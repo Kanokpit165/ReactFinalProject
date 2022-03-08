@@ -9,16 +9,24 @@ class Navbar extends Component {
         }
     }
 
+    activeitem = (item) => {
+        if (this.state,NavItemActive,length > 0) {
+            document.getElementById(this.state.NavItemActive).classList.remove('active');
+        }
+        this.setState({ 'NavItemActive': item })
+            document.getElementById(this.state.NavItemActive).classList.add('active');
+    }
+
     render() {
         return (
             <nav>
                 <ul>
-                    <Navitems item="Home" tolink="/"></Navitems>
-                    <Navitems item="About" tolink="/about"></Navitems>
-                    <Navitems item="Resume" tolink="/resume"></Navitems>
-                    <Navitems item="Product" tolink="/product"></Navitems>
-                    <Navitems item="Cart" tolink="/cart"></Navitems>
-                    <Navitems item="Contact" tolink="/contact"></Navitems>
+                    <Navitems item="Home" tolink="/" activenav={this.activeitem}></Navitems>
+                    <Navitems item="About" tolink="/about" activenav={this.activeitem}></Navitems>
+                    <Navitems item="Resume" tolink="/resume" activenav={this.activeitem}></Navitems>
+                    <Navitems item="Product" tolink="/product" activenav={this.activeitem}></Navitems>
+                    <Navitems item="Cart" tolink="/cart" activenav={this.activeitem}></Navitems>
+                    <Navitems item="Contact" tolink="/contact" activenav={this.activeitem}></Navitems>
                 </ul>
             </nav>
         )
