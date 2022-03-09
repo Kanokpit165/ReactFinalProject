@@ -5,7 +5,9 @@ import Navbar from "./components/Navbar"
 // Contents
 import Home from './contents/Home'
 import About from "./contents/About"
-import Resume from "./contents/Resume"
+import Resume from './contents/Resume'
+import Portfolio from './contents/Portfolio'
+import Contact from './contents/Contact'
 
 import { BrowserRouter as Router, Route } from "react-router-dom"
 
@@ -22,6 +24,12 @@ function App() {
         </Route>
         <Route exact path="/resume">
           <Resume />
+        </Route>
+        <Route exact path="/portfolio">
+          <Portfolio />
+        </Route>
+        <Route exact path="/contact">
+          <Contact />
         </Route>
       </div>
     </Router>

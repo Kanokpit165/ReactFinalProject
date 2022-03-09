@@ -9,24 +9,27 @@ class Navbar extends Component {
         }
     }
 
-    activeitem = (item) => {
+    /*activeitem = (item) => {
         if (this.state,NavItemActive,length > 0) {
             document.getElementById(this.state.NavItemActive).classList.remove('active');
         }
-        this.setState({ 'NavItemActive': item })
+        this.setState({ 'NavItemActive': item }, () => {
             document.getElementById(this.state.NavItemActive).classList.add('active');
+        })
     }
+     activenav={this.activeitem}></Navitems>*/
 
     render() {
         return (
             <nav>
                 <ul>
-                    <Navitems item="Home" tolink="/" activenav={this.activeitem}></Navitems>
-                    <Navitems item="About" tolink="/about" activenav={this.activeitem}></Navitems>
-                    <Navitems item="Resume" tolink="/resume" activenav={this.activeitem}></Navitems>
-                    <Navitems item="Product" tolink="/product" activenav={this.activeitem}></Navitems>
-                    <Navitems item="Cart" tolink="/cart" activenav={this.activeitem}></Navitems>
-                    <Navitems item="Contact" tolink="/contact" activenav={this.activeitem}></Navitems>
+                    <Navitems item="Home" tolink="/" ></Navitems>
+                    <Navitems item="About" tolink="/about" ></Navitems>
+                    <Navitems item="Resume" tolink="/resume" ></Navitems>
+                    <Navitems item="Portfolio" tolink="/potfolio" ></Navitems>
+                    <Navitems item="Product" tolink="/product" ></Navitems>
+                    <Navitems item="Cart" tolink="/cart" ></Navitems>
+                    <Navitems item="Contact" tolink="/contact"></Navitems>
                 </ul>
             </nav>
         )
@@ -37,4 +40,4 @@ class Navbar extends Component {
     }
 }
 
-export default Navbar
+export default Navbar;

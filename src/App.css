@@ -18,6 +18,8 @@
   min-height: 100vh;
 }
 
+/* Navbar */
+
 nav {
   padding: 60px 30px 0px 30px;
   flex: var(--sidebar-flex);
@@ -36,6 +38,8 @@ nav ul li a {
   text-decoration: none;
 }
 
+/* Home */
+
 .condiv {
   padding: 100px;
   background-color: #f4f5f9;
@@ -49,45 +53,79 @@ nav ul li a {
   align-items: center;
 }
 
+.typingeffect {
+  font-size: var(--typing-font);
+  margin-bottom: 15px;
+}
+
+/* Profile Picture */
+
 .profilepic {
   border-radius: 50%;
   width: 400px;
   margin: 30px;
 }
 
+/* Social Icon */
+
 .social {
   position: absolute;
   margin-top: 20px;
   display: flex;
   bottom: 60px;
+  color: #333;
 }
 
 .social i {
   padding-right: 30px;
   font-size: 25px;
-  color: #7c7c7c;
+  color: #000000;
 }
 .social i:hover {
-  color: rgb(53, 53, 53);
+  color: rgb(122, 122, 122);
 }
 
-.typingeffect {
-  font-size: var(--typing-font);
-  margin-bottom: 30px;
-}
+/* About */
 
 .about {
   text-align: center;
 }
-.subtopic {
+
+.profilepic_about {
+  border-radius: 50%;
+  width: 400px;
+  margin: 30px
+}
+
+.subtopic_About {
   margin: 10px 10px 40px 20;
+  text-align: center;
 }
+
+.signature_1 {
+  color: black;
+  font-size: 20px;
+  font-family: Arial;
+  text-align: right;
+}
+
 h1,h2,h3,h4 {
-  margin: 10px;
+  font-size: 40;
+  font-family: Arial;
 }
+
 p {
-  font-size: var(--fontsize-p);
+  font-size: 40;
+  font-family: Arial;
 }
+
+/* Widecrad */
+
+.subtopic_Resume {
+  margin: 10px 10px 40px 20;
+  text-align: center;
+}
+
 .widecard {
   display: flex;
   margin: 30px 0px 30px 0px;
@@ -101,6 +139,19 @@ p {
   box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
 }
 
+/* Skill */
+
+.condiv_skills {
+  padding: 100px;
+  background-color: #f4f5f9;
+  flex: var(--condiv_skills-flex);
+}
+
+.subtopic_skiills {
+  margin: 10px 10px 40px 20;
+  text-align: center;
+}
+
 .skill ul {
   display: flex;
   background-color: #333;
@@ -109,4 +160,16 @@ p {
 }
 .skills ul li {
   list-style: no;
+}
+
+/* Portfolio */
+.condiv_portfolio {
+  padding: 100px;
+  background-color: #f4f5f9;
+  flex: var(--condiv_skills-flex);
+}
+
+
+.active {
+  font-weight: bolder;
 }

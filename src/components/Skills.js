@@ -6,15 +6,15 @@ class Skills extends Component {
         super(props);
 
         this.state = {
-            'mysdkills': ['Photoshop', 'Illustrator', 'Procreate', 'Affinity']
+            'mysdkills': ['Photoshop', 'Illustrator', 'Procreate', 'Affinity', 'Logic Pro', 'Ableton']
         }
 
     }
 
     render() {
         return(
-            <div className="condiv skills">
-                <h1 className="subtopic">My Skills</h1>
+            <div className="condiv_skills">
+                <h1 className="subtopic_skiills">My Skills</h1>
                 <ul>
                     {this.state.mysdkills.map((value) => {
                         return <li>value</li>

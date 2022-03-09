@@ -5,17 +5,16 @@ class About extends Component {
     render() {
         return(
             <div className="condiv about">
-                <h1 className="subtopic">About Me</h1>
-                <img src={profilepic} />
-                <h3>Hi, I'm Kanokpit Rattanasiripirom</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum has been the industry's standard dummy text ever since the
-                1500s, when an unknown printer took a galley of type and scrambled it to
-                make a type specimen book. It has survived not only five centuries, but
-                also the leap into electronic typesetting, remaining essentially
-                unchanged. It was popularised in the 1960s with the release of Letraset
-                sheets containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <h1 className="subtopic_About">About Me</h1>
+                <img src={profilepic} alt="profile" className="profilepic_about" />
+                <p>
+                    ชีวิตในสายงานกราฟิกของผม มันเริ่มมาจากการได้เห็นหลายสิ่งหลายอย่างบนโลกใบนี้
+                    จากศิลปะและอารยธรรมอันงดงามที่มนุษย์ได้สร้างขึ้น ผมจึงชอบงานที่ต้องใช้จินตนาการ
+                    ในการมองและนึกคิดถึงความหมายต่างๆ ในผลงานเพื่อสร้างสรรค์งานให้ออกมาดีที่สุด
+                </p>
+
+                <h3 className="signature_1">กนกพิชญ์ รัตนาศิริภิรมย์</h3>
+                <h3 className="signature_1">Graphic Designer</h3>
             </div>
         )
     }
