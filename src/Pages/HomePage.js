@@ -15,7 +15,7 @@ function HomePage() {
             <div className="typography">
                 <h1>Hi, I'm <span>Kanokpit Rattanasiripirom</span></h1>
                 <p>
-                    Graphic Designer | Musician of Bassist | iPhone Repair Technician
+                    Graphic Design | Bass player and Recorder | iPhone repair Technician
                 </p>
                 <div className="icons">
                     <a href="https://www.facebook.com/profile.php?id=100010879360222" className="icon i-facebook">

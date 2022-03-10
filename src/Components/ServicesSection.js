@@ -15,20 +15,20 @@ function ServicesSection() {
                 <div className="services">
                     <ServiceCard 
                         image={GraphicDesign} 
-                        title={'Graphic Designer'} 
-                        paragraph={'Graphic design service as you want and meet the needs of your business to create a better idenity.'}
+                        title={'Graphic Design'} 
+                        paragraph={'Get graphic design at an affordable price but still get quality work that meets your needs to make your business even more advanced.'}
                     />
                     <div className="mid-card">
                         <ServiceCard 
                             image={Bass} 
-                            title={'Musician of Bassist'} 
-                            paragraph={'Bass guitar sound recording service and bass guitar design for your composed music. to make your overall musical composition look even better.'}
+                            title={'Bass player and Recorder'} 
+                            paragraph={'Bass recording and music making services to make your work more attractive and colorful.'}
                         />
                     </div>
                     <ServiceCard 
                         image={RepairPhone} 
-                        title={'iPhone Repair Technician'} 
-                        paragraph={'Get your iPhone repaired as well as maintain and clean your phone to make it new and original. without you having to buy a new device.'}
+                        title={'iPhone repair Technician'} 
+                        paragraph={'Repairing all Apple branded devices including iPhone, iPad, iMac, Macbook etc. at affordable prices and clean like new.'}
                     />
                 </div>
             </ServicesSectionStyled>

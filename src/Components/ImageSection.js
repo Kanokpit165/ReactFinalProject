@@ -10,11 +10,9 @@ function ImageSection() {
                 <img src={resume} alt=""/>
             </div>
             <div className="right-content">
-                <h4>I am <span>Lorem Ipsum</span></h4>
+                <h4>I am <span>Art Kanokpit</span></h4>
                 <p className="paragraph">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, natus quas vero enim 
-                    praesentium delectus est id fugiat ab libero adipisci recusandae at maxime veritatis! 
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi, nesciunt.
+                “ My life in graphics begins with seeing many things in the world as beautiful and expressive art, so I like work that requires imagination to see and think of meaning.  So I'm a person who likes to do everything. Always like to find something interesting to wear, such as Crative in art, including the story of the creation of various technologies in the modern era such as Elon Mask and Steve Job, which  I've always held to his ideas and quotes to never stop thinking, never stop doing it, and to draw inspiration from everything that surrounds me to this day.”
                     
                 </p>
                 <div className="about-info">

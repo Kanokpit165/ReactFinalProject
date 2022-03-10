@@ -12,43 +12,43 @@ function Skills() {
                 <InnerLayout>
                     <div className="skills">
                         <ProgressBar 
-                            title={'Adobe Photoshop'}
-                            width={'85%'}
-                            text={'85%'}
-                        />
-                        <ProgressBar 
                             title={'Adobe Illustrator'}
                             width={'95%'}
                             text={'95%'}
                         />
                         <ProgressBar 
+                            title={'Adobe Photoshop'}
+                            width={'90%'}
+                            text={'90%'}
+                        />
+                        <ProgressBar 
                             title={'Adobe Premire Pro'}
+                            width={'70%'}
+                            text={'70%'}
+                        />
+                        <ProgressBar 
+                            title={'Adobe After Effect'}
                             width={'60%'}
                             text={'60%'}
                         />
                         <ProgressBar 
-                            title={'Adobe After Effect'}
+                            title={'Autodesk Maya'}
                             width={'50%'}
-                            text={'50%'}
+                            text={'55%'}
                         />
                         <ProgressBar 
-                            title={'Logic Pro'}
-                            width={'75%'}
-                            text={'75%'}
+                            title={'Apple Logic Pro'}
+                            width={'80%'}
+                            text={'80%'}
                         />
                         <ProgressBar 
-                            title={'Ableton Live'}
+                            title={'Apple Final Cut Pro'}
                             width={'65%'}
                             text={'65%'}
                         />
                         <ProgressBar 
-                            title={'Python'}
-                            width={'70%'}
-                            text={'70%'}
-                        />
-                         <ProgressBar 
-                            title={'React JS'}
-                            width={'50%'}
+                            title={'Python Programing'}
+                            width={'55%'}
                             text={'50%'}
                         />
                     </div>

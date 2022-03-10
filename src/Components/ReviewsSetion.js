@@ -11,10 +11,10 @@ function ReviewsSetion() {
             <InnerLayout>
                 <div className="reviews">
                     <ReviewItem 
-                        text={'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt culpa ad itaque quas?'} 
+                        text={'I am a person who loves to have fun in life and is always looking for something new and questioning what I see.'} 
                     />
                     <ReviewItem 
-                        text={'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt culpa ad itaque quas? Dos ir por culpa ad itaque quas!'} 
+                        text={'I am a funny person who likes to do fun things. And what I like the most is ... doing something that is free and without boundaries, because I am always in search of passion.'} 
                     />
                     
                 </div>

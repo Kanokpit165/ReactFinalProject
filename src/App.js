@@ -4,18 +4,13 @@ import { useEffect } from "react";
 import Sidebar from "./Components/Sidebar";
 import styled from 'styled-components';
 
-
-//Pages
 import HomePage from "./Pages/HomePage";
 import AboutPage from './Pages/AboutPage';
 import ResumePage from './Pages/ResumePage';
 import PortfoliosPage from './Pages/PortfoliosPage';
-import BlogsPage from './Pages/BlogsPage';
 import ProductPage from './Pages/ProductPage';
-import CartPage from "./Pages/CartPage";
+import CartPage from './Pages/CartPage';
 import ContactPage from './Pages/ContactPage';
-
-
 
 import Brightness4Icon from '@material-ui/icons/Brightness4';
 import MenuIcon from '@material-ui/icons/Menu';
@@ -92,14 +87,11 @@ function App() {
             <Route path="/portfolios" exact>
               <PortfoliosPage />
             </Route>
-            <Route path="/blogs" exact>
-               <BlogsPage />
-            </Route>
             <Route path="/product" exact>
-              <ProductPage />
+               <ProductPage />
             </Route>
             <Route path="/cart" exact>
-              <CartPage />
+               <CartPage />
             </Route>
             <Route path="/contact" exact>
               <ContactPage />

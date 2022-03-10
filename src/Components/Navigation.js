@@ -23,9 +23,6 @@ function Navigation() {
                     <NavLink to="/portfolios" activeClassName="active-class" exact>Portfolios</NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink to="/blogs" activeClassName="active-class" exact>Blogs</NavLink>
-                </li>
-                <li className="nav-item">
                     <NavLink to="/product" activeClassName="active-class" exact>Product</NavLink>
                 </li>
                 <li className="nav-item">
@@ -36,7 +33,7 @@ function Navigation() {
                 </li>
             </ul>
             <footer className="footer">
-                <p>@2022 <b>ART | DESIGN</b></p>
+                <p>@2022 <b>Art | Design</b></p>
             </footer>
         </NavigationStyled>
     )
