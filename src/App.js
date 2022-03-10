@@ -1,6 +1,7 @@
 import React from "react";
 import './App.css';
 import Navbar from "./components/Navbar"
+import 'materialize-css/dis/css/materialize.min.css';
 
 // Contents
 import Home from './contents/Home'
