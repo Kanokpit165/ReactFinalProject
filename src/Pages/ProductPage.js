@@ -1,154 +1,94 @@
-import React from "react";
-import { Image, Badge, Spinner } from "react-bootstrap";
-import axios from "axios";
-import { BiBookOpen } from "react-icons/bi";
-import { InnerLayout, MainLayout } from "../styles/Layouts";
-import Title from "../Components/Title";
-import Table from "@mui/material/Table";
-import TableBody from "@mui/material/TableBody";
-import TableCell from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
-import TableRow from "@mui/material/TableRow";
-import Paper from "@mui/material/Paper";
-import Stack from "@mui/material/Stack";
-import Button from "@mui/material/Button";
-import styled from "styled-components";
-import { addToCart } from "../Redux/Reducer/Action/CartAction";
-import { useSelector, useDispatch } from "react-redux";
+import React from 'react'
+import { InnerLayout, MainLayout } from '../styles/Layouts'
+import Title from '../Components/Title'
+import Product from '../Components/Product'
+import styled from 'styled-components'
 
 const ProductPage = () => {
-  const [product, setProduct] = React.useState([]);
-  const [loading, setLoading] = React.useState(false);
-  const [error, setError] = React.useState(null);
-
-  const dispatch = useDispatch();
-  const cart = useSelector((state) => state.cartReducer.cart);
-  const total = useSelector((state) => state.cartReducer.total);
-
-  const getData = async () => {
-    try {
-      setLoading(true);
-      const resp = await axios.get("https://api.codingthailand.com/api/course");
-      setProduct(resp.data.data);
-    } catch (error) {
-      setError(error);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const addCart = (p) => {
-    const product = {
-      id: p.id,
-      name: p.title,
-      price: p.view,
-      qty: 1,
-    };
-
-    dispatch(addToCart(product, cart));
-  };
-
-  React.useEffect(() => {
-    getData();
-  }, []);
-
-  if (loading === true) {
-    return (
-      <div className="text-center mt-5">
-        <Spinner animation="border" variant="primary" />
-      </div>
-    );
-  }
-
-  if (error) {
-    return (
-      <div className="text-center mt-5 text-danger">
-        <h4>Error from API, plese try again</h4>
-        <p>{error.response.data.message}</p>
-      </div>
-    );
-  }
-
   return (
-    <ProductStyle>
-      <MainLayout>
-        <InnerLayout>
-          <Title title={"Product"} span={"Product"} />
-        </InnerLayout>
-        <div className="center">
-          <TableContainer component={Paper} className="table">
-            <Table sx={{ minWidth: 650 }} aria-label="simple table">
-              <TableHead>
-                <TableRow className="thead">
-                  <TableCell style={{ color: "white" }}>ID</TableCell>
-                  <TableCell style={{ color: "white" }}>Title</TableCell>
-                  <TableCell style={{ color: "white" }}>Course Detail</TableCell>
-                  <TableCell style={{ color: "white" }}>Created Date</TableCell>
-                  <TableCell style={{ color: "white" }}>View</TableCell>
-                  <TableCell style={{ color: "white" }}>Detail</TableCell>
-                  <TableCell style={{ color: "white" }}>Picture</TableCell>
-                </TableRow>
-              </TableHead>
-              {product.map((p, index) => (
-                <TableRow
-                  className="tbody"
-                  key={p.id}
-                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-                >
-                  <TableCell component="th" scope="product" className="tcell">
-                    {p.id}
-                  </TableCell>
-                  <TableCell className="tcell">{p.title}</TableCell>
-                  <TableCell className="tcell">{p.detail}</TableCell>
-                  <TableCell className="tcell">{p.date}</TableCell>
-                  <TableCell className="tcell">{p.view}</TableCell>
-                  {/* <td>{p.picture}</td> */}
-                  <TableCell>
-                    <Image src={p.picture} rounded width="60" />
-                  </TableCell>
-                  <TableCell>
-                    <Stack spacing={2} direction="row">
-                      <Button
-                        variant="contained"
-                        className="ml-2"
-                        onClick={() => addCart(p)}
-                      >
-                        Buy <BiBookOpen />
-                      </Button>
-                    </Stack>
-                  </TableCell>
-                </TableRow>
-              ))}
-            </Table>
-          </TableContainer>
-        </div>
-      </MainLayout>
-    </ProductStyle>
-  );
-};
+    <>
+    <HomePageStyled>
+    <MainLayout>
+    <h1><span className='reveal-text'>Product</span></h1>
+            <Title title={'Product'} span={'Product'}/>
+              <InnerLayout>
+                  <Product/>
+                </InnerLayout>
+             
+    </MainLayout>
+    </HomePageStyled>
+    </>
+  )
+}
 
-const ProductStyle = styled.div`
-  height: 100vh;
-  position: static;
+const HomePageStyled = styled.header`
 
-  .center {
-    align-items: center;
-    justify-content: center;
-    display: flex;
-  }
-  .table {
-    width: 80%;
-  }
-  .thead{
-    background-color: var(--table-header-color);
-  }
-  .tbody{
-    background-color: var(--table-body-color);
-  }
-  .tcell{
-    color: var(--white-color);
-  }
+.reveal-text,
+    .reveal-text::after {
+        animation-delay: var(--animation-delay, 2s);
+        animation-iteration-count: var(--iterations, 1);
+        animation-duration: var(--duration, 800ms);
+        animation-fill-mode: both;
+        animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
+    }
+    
+    .reveal-text {
+        --animation-delay: var(--delay, 0);
+        --animation-duration: var(--duration, 800ms);
+        --animation-iterations: var(--iterations, 1);
+        position: relative;
+        animation-name: clip-text;
+        white-space: nowrap;
+        cursor: default;
+        
+        &::after {
+            content: "";
+            position: absolute;
+            z-index: 999;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: var(--primary-color);
+            transform: scaleX(0);
+            transform-origin: 0 50%;
+            pointer-events: none;
+            animation-name: text-revealer;
+        }
+        
+    }
+    
+    
+    @keyframes clip-text {
+        from {
+            clip-path: inset(0 100% 0 0);
+        }
+        to {
+            clip-path: inset(0 0 0 0);
+        }
+    }
+    
+    
+    @keyframes text-revealer {
+        
+        0%, 50% {
+            transform-origin: 0 50%;
+        }
+        
+        60%, 100% {
+            transform-origin: 100% 50%;		
+        }
+    
+        
+        60% {
+            transform: scaleX(1);
+        }
+        
+        100% {
+            transform: scaleX(0);
+        }
+    }
+
 `;
 
 export default ProductPage

@@ -10,11 +10,15 @@ import Brightness4Icon from '@material-ui/icons/Brightness4';
 import { useState , useEffect } from 'react'
 import ResumePage from "./Pages/ResumePage";
 import ContactPage from "./Pages/ContactPage";
+
+//import { useState } from "react";
+//import { useEffect } from "react";
+
 import ProductPage from "./Pages/ProductPage";
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
+import rootReducer from "./redux/reducers/index";
 import CartPage from "./Pages/CartPage";
-import rootReducer from "./Redux/Reducer";
-import { Provider } from "react-redux";
-import { createStore } from "redux";
 
 const store = createStore(rootReducer)
 
