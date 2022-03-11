@@ -89,4 +89,4 @@ const HomePageStyled = styled.header`
     }
 `;
 
-export default HomePage;
+export default HomePage
